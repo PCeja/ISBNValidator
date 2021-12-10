@@ -9,17 +9,14 @@ class ValidateISBN {
 
     public boolean checkISBN(String isbn) {
         if (isbn.length() == LONG_ISBN_LENGTH) {
-            return isThisAValid13ISBN(isbn);
-        } else {
-            if (isbn.length() != SHORT_ISBN_LENGTH)
-                throw new NumberFormatException("ISBN numbers must be 10 digits long");
-
-            return isThisAValid10DigitsISBN(isbn);
+            return isThisAValidLongISBN(isbn);
+        } else if (isbn.length() == SHORT_ISBN_LENGTH) {
+            return isThisAValidShortISBN(isbn);
         }
-
+        throw new NumberFormatException("ISBN numbers must be 10 digits long");
     }
 
-    private boolean isThisAValid10DigitsISBN(String isbn) {
+    private boolean isThisAValidShortISBN(String isbn) {
         int total = 0;
         for (int i = 0; i < SHORT_ISBN_LENGTH; i++) {
             if (!Character.isDigit(isbn.charAt(i))) {
@@ -35,7 +32,7 @@ class ValidateISBN {
         return total % SHORT_ISBN_MULTIPLIER == 0;
     }
 
-    private boolean isThisAValid13ISBN(String isbn) {
+    private boolean isThisAValidLongISBN(String isbn) {
         int total = 0;
 
         for (int i = 0; i < LONG_ISBN_LENGTH; i++) {
