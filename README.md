@@ -1,7 +1,7 @@
 <h1 align="center">TDD - ISBNValidator</h1>
 
 <p align="center">
-A ISBNValidator developed with Test-driven development (TDD) style.🐞👩‍💻
+A ISBNValidator developed with Test-driven development(TDD) and Test Stub.🐞👩‍💻
 </p>
 
 <p align="center">
