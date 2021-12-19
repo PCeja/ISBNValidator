@@ -1,14 +1,11 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
-# Gradle
-.gradle
-**/build/
-!src/**/build/
-
 # IDEs and editors
 .idea
 .c9/
 .settings/
+.idea/gradle.xml
+.idea/libraries
 
 # Logs
 logs
@@ -19,3 +16,19 @@ jspm_packages/
 
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
+
+# BlueJ files
+*.ctxt
+
+# Package Files #
+*.jar
+*.war
+*.ear
+
+# Gradle
+.gradle
+**/build/
+!src/**/build/
+*.class
+*.aar
+!gradle-wrapper.jar
