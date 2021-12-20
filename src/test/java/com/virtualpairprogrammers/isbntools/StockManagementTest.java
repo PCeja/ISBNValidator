@@ -23,6 +23,9 @@ public class StockManagementTest {
 
     @Test
     public void dataBaseIsUsedIfDataIsPresent() {
+        // Mocks used to
+        // Override external dependencies
+        // Test Behavior
         ExternalISBNDataService dbService = mock(ExternalISBNDataService.class);
         ExternalISBNDataService webService = mock(ExternalISBNDataService.class);
         when(dbService.lookup("1040177396")).thenReturn(new Book("1040177396", "abc", "abc"));
