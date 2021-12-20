@@ -15,7 +15,7 @@ public class StockManagementTest {
     // Instead of @Before in JUnit4
     @BeforeEach
     public void setup() {
-        // Instanciations
+        // Instantiations
         testWebService = mock(ExternalISBNDataService.class);
         testDBService = mock(ExternalISBNDataService.class);
         stockmanager = new StockManager();
