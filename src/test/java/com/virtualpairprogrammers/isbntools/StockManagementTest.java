@@ -36,20 +36,28 @@ public class StockManagementTest {
 
         verify(dbService, atMostOnce()).lookup("1040177396");
         // Verify  webService.lookup never called
-        // as the book was found in dbService
+        // as the book was found in DB
         verify(webService, never());
 
     }
 
     @Test
     public void webServiceIsUsedIfDataIsNotPresentinDB() {
+        ExternalISBNDataService dbService = mock(ExternalISBNDataService.class);
+        ExternalISBNDataService webService = mock(ExternalISBNDataService.class);
+        when(dbService.lookup("1040177396")).thenReturn(null);
+        when(webService.lookup("1040177396")).thenReturn(new Book("1040177396", "abc", "abc"));
+
+        StockManager stockmanager = new StockManager();
+        stockmanager.setWebService(webService);
+        stockmanager.setDbService(dbService);
 
         String isbn = "1040177396";
         String locatorCode = stockmanager.getLocatorCode(isbn);
 
-        verify(dbService, atMost(1)).lookup("1040177396");
-        // Verify lookup method is not called in webService
-        // as the book was found in dbService
-        verify(webService, times(1)).lookup(anyString());
+        verify(dbService, atMostOnce()).lookup("1040177396");
+        // Verify webService.lookup call
+        // as the book wasn't found in DB
+        verify(webService, atLeastOnce()).lookup(anyString());
     }
 }
