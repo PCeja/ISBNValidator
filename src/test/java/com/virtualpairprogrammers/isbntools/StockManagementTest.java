@@ -56,8 +56,8 @@ public class StockManagementTest {
         String locatorCode = stockmanager.getLocatorCode(isbn);
 
         verify(dbService, atMostOnce()).lookup("1040177396");
-        // Verify webService.lookup call
+        // Verify webService.lookup call once
         // as the book wasn't found in DB
-        verify(webService, atLeastOnce()).lookup(anyString());
+        verify(webService).lookup(anyString());
     }
 }
