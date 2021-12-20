@@ -8,12 +8,19 @@ public class StockManagementTest {
 
     @Test
     public void testCanGetACorrectLocatorCode() {
-        // Stubs
-        ExternalISBNDataService testServiceResponse = isbn -> new Book(isbn, "Of Mice And Men", "J. Steinbeck");
+        // Stubs  used to:
+        // Override external dependencies
+        // Test data
+//        ExternalISBNDataService testWebService = isbn -> new Book(isbn, "Of Mice And Men", "J. Steinbeck");
         ExternalISBNDataService testDBService = isbn -> null;
 
+        // Use mocking instead of stub for testWebService
+        ExternalISBNDataService testWebService = mock(ExternalISBNDataService.class);
+        when(testWebService.lookup(anyString()))
+                .thenReturn(new Book("1040177396", "Of Mice And Men", "J. Steinbeck"));
+
         StockManager stockmanager = new StockManager();
-        stockmanager.setWebService(testServiceResponse);
+        stockmanager.setWebService(testWebService);
         stockmanager.setDbService(testDBService);
 
         String isbn = "1040177396";
