@@ -10,8 +10,11 @@ public class StockManagementTest {
     public void testCanGetACorrectLocatorCode() {
         ExternalISBNDataService testServiceResponse = isbn -> new Book(isbn, "Of Mice And Men", "J. Steinbeck");
 
+        ExternalISBNDataService testDBService = isbn -> null;
+
         StockManager stockmanager = new StockManager();
-        stockmanager.setServiceResponse(testServiceResponse);
+        stockmanager.setWebService(testServiceResponse);
+        stockmanager.setDbService(testDBService);
 
         String isbn = "1040177396";
         String locatorCode = stockmanager.getLocatorCode(isbn);
