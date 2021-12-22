@@ -5,11 +5,13 @@
 </p>
 
 <p align="center">
+  <img style='width: 80%' alt="Technologies" src="https://i.imgur.com/YRKSJQD.png" />
+</p>
+
+<p align="center">
   <img style='width: 80%' alt="TDD" src="https://marsner.com/wp-content/uploads/test-driven-development-TDD.png" />
 </p>
 
 <p align="center">
-  <img style='width: 80%' alt="Technologies" src="https://i.imgur.com/YRKSJQD.png" />
+  <img style='width: 80%' alt="TDD" src="https://imgur.com/LZ2m4tf.png" />
 </p>
-
-
