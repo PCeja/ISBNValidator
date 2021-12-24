@@ -13,7 +13,7 @@
 </p>
 
 <p align="center">
-  <img style='width: 80%' alt="TDD" src="https://imgur.com/LZ2m4tf.png" />
+  <img style='width: 80%' alt="TDDCycle" src="https://i.imgur.com/LZ2m4tf.png" />
 </p>
 
 ## <div align="center">Documentation</div>
