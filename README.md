@@ -5,15 +5,11 @@
 </p>
 
 <p align="center">
-  <img style='width: 80%' alt="Technologies" src="https://i.imgur.com/YRKSJQD.png" />
+  <img style='width: 40%' alt="Technologies" src="https://i.imgur.com/YRKSJQD.png" />
 </p>
 
 <p align="center">
-  <img style='width: 80%' alt="TDD" src="https://marsner.com/wp-content/uploads/test-driven-development-TDD.png" />
-</p>
-
-<p align="center">
-  <img style='width: 80%' alt="TDD" src="https://imgur.com/LZ2m4tf.png" />
+  <img style='width: 50%' alt="TDD" src="https://marsner.com/wp-content/uploads/test-driven-development-TDD.png" />
 </p>
 
 ## <div align="center">Documentation</div>
@@ -40,3 +36,8 @@ ISBN Validator for 10 and 13 digits formats developed following TDD programming 
 4. Continuous **refactoring** 🚀.
 
 </details>
+
+
+<p align="center">
+  <img style='width: 80%' alt="TDD" src="https://imgur.com/LZ2m4tf.png" />
+</p>
